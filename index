@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماه تولد شما</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        select {
+            font-size: 18px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>ماه تولد خود را انتخاب کنید</h1>
+    <select id="monthSelect">
+        <option value="فروردین">فروردین</option>
+        <option value="اردیبهشت">اردیبهشت</option>
+        <option value="خرداد">خرداد</option>
+        <option value="تیر">تیر</option>
+        <option value="مرداد">مرداد</option>
+        <option value="شهریور">شهریور</option>
+        <option value="مهر">مهر</option>
+        <option value="آبان">آبان</option>
+        <option value="آذر">آذر</option>
+        <option value="دی">دی</option>
+        <option value="بهمن">بهمن</option>
+        <option value="اسفند">اسفند</option>
+    </select>
+    <br>
+    <button onclick="showMonthInfo()">نمایش خصوصیات ماه</button>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function showMonthInfo() {
+            var month = document.getElementById("monthSelect").value;
+            var result = document.getElementById("result");
+
+            var monthInfo = {
+                "فروردین": "فروردین: آغاز بهار، پر از انرژی و نشاط.",
+                "اردیبهشت": "اردیبهشت: ماهی برای لذت بردن از طبیعت و شکوفایی.",
+                "خرداد": "خرداد: ماه هوش و ذکاوت، همیشه در جستجوی حقیقت.",
+                "تیر": "تیر: ماهی برای روابط خانوادگی و دوستانه.",
+                "مرداد": "مرداد: ماه قدرت و شجاعت، همیشه در مرکز توجه.",
+                "شهریور": "شهریور: ماهی برای نظم و ترتیب، همیشه منظم.",
+                "مهر": "مهر: ماهی برای صلح و عشق، فردی مهربان.",
+                "آبان": "آبان: ماهی برای تفکر و تحلیل، بسیار دقیق و ریزبین.",
+                "آذر": "آذر: ماهی برای ماجراجویی، پر از شور و هیجان.",
+                "دی": "دی: ماهی برای صبر و ثبات، فردی مسئولیت‌پذیر.",
+                "بهمن": "بهمن: ماهی برای نوآوری و خلاقیت، همیشه در جستجوی راه‌های جدید.",
+                "اسفند": "اسفند: ماهی برای آرامش و تفکر عمیق، فردی حساس."
+            };
+
+            result.textContent = monthInfo[month] || "ماه انتخاب نشده است.";
+        }
+    </script>
+</body>
+</html>
